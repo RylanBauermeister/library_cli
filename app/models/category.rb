@@ -16,7 +16,7 @@ class Category < ActiveRecord::Base
 
   def available_books
     books.select do |book|
-      !books.loans.any?{|loan|
+      !book.loans.any?{|loan|
         loan.status == "out"
       }
     end

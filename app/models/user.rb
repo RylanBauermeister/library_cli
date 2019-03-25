@@ -1,3 +1,4 @@
+require "pry"
 class User < ActiveRecord::Base
   has_many :loans
   has_many :books, through: :loans
